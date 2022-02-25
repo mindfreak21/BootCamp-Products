@@ -7,9 +7,63 @@
     
 </head>
 <body>
-    <h1>BootCamp Javascript</h1>
-    <p>Bienvenidos !</p>
-    <p>BootCamp</p>
+    <form action="index.html">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" id="cantidad">
+        </div>
+        <div>
+            <label for="precio">Precio:</label>
+            <input type="number" name="precio" id="precio">
+        </div>
+        <div>
+            <label for="categoria">Categoria:</label>
+            <select name="categoria" id="categoria">
+                <option value="1">Categoria 1</option>
+                <option value="2">Categoria 2</option>
+                <option value="3">Categoria 3</option>
+                <option value="4">Categoria 4</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Codigo</td>
+                    <td>Nombre</td>
+                    <td>Cantidad</td>
+                    <td>Precio</td>
+                    <td>Total</td>
+                    <td><a href="#"></a>Editar</td>
+                    <td><a href="#"></a>Eliminar</td>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Totales:</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tbody>
+        </table>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

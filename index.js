@@ -1,16 +1,34 @@
-let paragraphs = document.getElementsByTagName("p");
-console.log(paragraphs);
+const form = document.getElementsByTagName("form")[0];
+const tbody = document.getElementsByTagName("tbody")[0];
 
-if (paragraphs.length > 0) 
+form.addEventListener("submit",onSubmit);
+
+/**
+ * 
+ * @param {Event} event 
+ */
+
+function onSubmit(event)
 {
-    let paragraph = paragraphs[0];
+    event.preventDefault();
 
-    paragraph.innerText = "Bienvenidos al bootcamp";
-}
+    const data = new FormData(form);
+    const values = Array.from(data.entries());
 
-if (paragraphs.length > 1) 
-{
-    const paragraph = paragraphs[0];
-    const fecha = new Date();
-    paragraph.innerText = "Parrafos en el documento: " + paragraphs.length + " ("  + fecha + ")";
+    const nombre = values[0][1];
+    const cantidad = values[1][1];
+    const precio = values[2][1];
+    const categoria = values[3][1];
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td>X</t><td>" 
+        + nombre + "</td><td>" 
+        + cantidad + "</td><td>" 
+        + precio + "</td><td>" 
+        + categoria + "</td><td>"
+        + 0 + '</td><td><a href="#">Editar</a> | <a href="#">Eliminar</a> </td>';
+    tbody.appendChild(tr);
+
+
+ 
 }
