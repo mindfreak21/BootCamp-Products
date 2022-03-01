@@ -8,6 +8,7 @@
 </head>
 <body>
     <form action="index.html">
+        <input type="hidden" name="codigo" id="codigo">
         <div>
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" id="nombre">
@@ -42,17 +43,16 @@
                     <td>Cantidad</td>
                     <td>Precio</td>
                     <td>Total</td>
-                    <td><a href="#"></a>Editar</td>
-                    <td><a href="#"></a>Eliminar</td>
+                   
                 </tr>
             </thead>
             <tfoot>
                 <tr>
                     <td colspan="2">Totales:</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="cantidad-total">0</td>
+                    <td id="precio-total">0</td>
+                    <td id="gran-total">0</td>
+                    <td id=""></td>
                 </tr>
             </tfoot>
             <tbody>
